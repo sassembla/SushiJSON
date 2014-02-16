@@ -4,7 +4,7 @@ Sushi:{JSON}
 	╚═╗│ │└─┐├─┤│ : {JSON}
 	╚═╝└─┘└─┘┴ ┴┴
 
-The partial-parse-designed DSL which contains JSON with naming rule.  
+The partial-parsable-designed DSL which contains JSON with naming rule.  
 Mainly made for controlling the text editor. like the **Sublime Text**, **Vim**, and the other.
 
 
@@ -153,7 +153,7 @@ Anyway, you can evaluate each JSON **partially** on the runtime.
 
 "injects" keyword makes change the key of the result of the parentAPI.
 
-each API has results. these are implicitly inject to "selectors" API.
+each API has results. these are implicitly injected to "selectors" API.
 
 	APIName: {
 		"injects": {
@@ -215,3 +215,6 @@ This feature can be use for injecting the original parameter, like below.
 		]
 	}
 	
+
+##sample implementation
+see SushiJSON.py
