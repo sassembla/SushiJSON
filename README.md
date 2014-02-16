@@ -60,9 +60,9 @@ nested:
 nested & accepts:
 	
 	APIName: {
-		"selectors <- param": [
+		"selectors": [
 			{
-				"APIName": {JSON}
+				"APIName <- param": {JSON}
 			}
 		]
 	}
@@ -74,12 +74,16 @@ nested, injects & accepts:
 		"injects": {
 			"result": "param"
 		},
-		"selectors <- param": [
+		"selectors": [
 			{
-				"APIName": {JSON}
+				"APIName <- param": {JSON}
 			}
 		]
 	}
+
+
+##keywords
+	->, <-, "selectors" and "injects".
 
 ## features
 
@@ -90,6 +94,7 @@ nested, injects & accepts:
 		"source": "Somewhere/Something.cs(30,23): error CS1002: Expecting `;'"
 	}
 
+APIName is bare string.  
 The below part is purely JSON. and this works as attaching parameters to the API.
 
 	{
@@ -216,5 +221,5 @@ This feature can be use for injecting the original parameter, like below.
 	}
 	
 
-##sample implementation
+##sample parser implementation
 see SushiJSON.py
