@@ -83,7 +83,7 @@ nested, injects & accepts:
 
 ## features
 
-#####JSON inside. 
+###JSON inside. 
 
 	filtering: {
 		"name": "error_example",
@@ -105,7 +105,7 @@ Same in Python,
 Each API can be defined these parameter keys and values,  
 and it's easy to add specific keys and values too.
 
-#####Ordered and separeted.
+###Ordered and separeted.
 **[ -> "right arrow" ]** rules the order of execution and cannot sent parameter between the **[ -> ]**.
 
 	showAtLog: {
@@ -134,7 +134,7 @@ Each "showAtLog" command has no relationship & no parameter sharing over [ -> ].
 Anyway, you can evaluate each JSON **partially** on the runtime.
 
 
-#####injects & accepts
+###injects & accepts
 
 **[ <- "left arrow" ]** means "this API accepts the named-value from the result of parent-API".
 
