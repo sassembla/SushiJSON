@@ -106,7 +106,7 @@ Each API can be defined these parameter keys and values,
 and it's easy to add specific keys and values too.
 
 ###Ordered and separeted.
-**[ -> "right arrow" ]** rules the order of execution and cannot sent parameter between the **[ -> ]**.
+**[ -> "right arrow" ]** rules the order of execution and cannot share the parameters over the **[ -> ]**.
 
 	showAtLog: {
 		"message": "1st"
