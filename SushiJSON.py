@@ -6,7 +6,7 @@ SUSHIJSON_COMMAND_PARAMS_DELIM		= ":"	# only first ":" will be evaluated as deli
 SUSHIJSON_COMMAND_KEYWORD_INJECT	= "<-"
 SUSHIJSON_COMMAND_KEYWORD_DELIM		= ","
 
-SUSHIJSON_COMMENT_DELIM				= "/"	# comment expression in API. ss@COMMENT/API...
+SUSHIJSON_COMMENT_DELIM				= "/"	# comment expression in API. COMMENT/API...
 
 SUSHIJSON_TEST_BEFOREAFTER_DELIM	= "beforeafter>" #delimiter of the slectors of "befrore" and "after"
 SUSHIJSON_TESTCASE_DELIM			= "test>"	# test commands delim.
@@ -89,6 +89,7 @@ class SushiJSONParser():
 
 
 	@classmethod
+	
 	def composeParams(self, command, params, injects):
 		
 		# erase comment
@@ -169,5 +170,25 @@ class SushiJSONParser():
 			resultInjectDict[key] = APIDefinedInjectiveKeysAndValues[key]
 
 		return resultInjectDict
+
+
+	@classmethod
+	def runSelectors(self, params, apiDefinedInjectiveKeys, apiDefinedInjectiveValues, runnable):
+		if params:
+			assert len(apiDefinedInjectiveKeys) == len(apiDefinedInjectiveValues), "cannot generate inective-keys and values:"+str(apiDefinedInjectiveKeys)+" vs injects:"+str(apiDefinedInjectiveValues)
+			zippedInjectiveParams = dict(zip(apiDefinedInjectiveKeys, apiDefinedInjectiveValues))
+
+			if SUSHIJSON_KEYWORD_SELECTORS in params:
+				selectors = params[SUSHIJSON_KEYWORD_SELECTORS]
+
+				# inject
+				composedInjectParams = self.injectParams(params, zippedInjectiveParams)
+				
+				for selector in selectors:
+					for eachCommand, eachParams in selector.items():
+						command, params = self.composeParams(eachCommand, eachParams, composedInjectParams)
+						runnable(command, params)
+
+
 
 
