@@ -1,5 +1,7 @@
 SushiJSON
 ======
+![SUSHI](/logo.png)
+
 	╔═╗┬ ┬┌─┐┬ ┬┬
 	╚═╗│ │└─┐├─┤│ : {JSON}
 	╚═╝└─┘└─┘┴ ┴┴
@@ -246,3 +248,5 @@ This feature can be use for injecting the original parameter, like below.
 
 ###why naming sushi
 I love sushi. forever.
+
+###License
