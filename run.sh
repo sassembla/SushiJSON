@@ -1,1 +1,0 @@
-python -m parser.runtimeSample.SampleSushiJSONRunner ./parser/runtimeSample/source/helloworld.txt

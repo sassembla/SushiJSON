@@ -1,5 +1,6 @@
 import re
 
+import SushiJSON
 from .SushiJSON import SushiJSONParser
 
 SUSHIJSONTEST_BEFOREAFTER_DELIM			= "beforeafter>" #delimiter of the slectors of "befrore" and "after"
@@ -33,8 +34,8 @@ class SushiJSONTestParser():
 		def addBeforeAndAfter(testCase):
 			parsedCommandsAndParams = SushiJSONParser.parseStraight(testCase)
 
-			parsedCommandsAndParams.insert(0, (SETTESTBEFOREAFTER_BEFORESELECTORS, beforeSelectors))
-			parsedCommandsAndParams.append((SETTESTBEFOREAFTER_AFTERSELECTORS, afterSelectors))
+			parsedCommandsAndParams.insert(0, (SETTESTBEFOREAFTER_BEFORESELECTORS, {SushiJSON.SUSHIJSON_KEYWORD_SELECTORS:beforeSelectors}))
+			parsedCommandsAndParams.append((SETTESTBEFOREAFTER_AFTERSELECTORS, {SushiJSON.SUSHIJSON_KEYWORD_SELECTORS:afterSelectors}))
 			
 			return parsedCommandsAndParams
 			

@@ -6,7 +6,7 @@ sequence: {
 	// the keyword that is defined in SushiJSON.
 	"selectors": [
 		{
-			"helloworld": {
+			"helloWorld": {
 				"message": "hello from selectors"
 			}
 		}

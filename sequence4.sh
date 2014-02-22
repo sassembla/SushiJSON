@@ -1,1 +1,1 @@
-python -m parser.runtimeSample.SampleSushiJSONRunner ./parser/runtimeSample/source/sequence4.txt
+python -m parser.runtimeSample.SampleSushiJSONRunner ./parser/source/sequence4.txt

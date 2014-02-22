@@ -1,0 +1,45 @@
+beforeafter>thebeforeafterselectors/selector: {
+    "beforeselectors": [
+    	{
+    		"helloWorld": {
+    			"message": "test started."
+    		}
+    	}
+    ],
+    "afterselectors": [
+    	{
+    		"helloWorld": {
+    			"message": "test overed."
+    		}
+    	}
+    ]
+}
+
+
+// define test cases with "test>" keyword.
+// will succeed
+test>helloWorld: {
+	"message": "testing"
+}->assertResult: {
+	"id": "helloWorld should set result",
+	"contains": {
+		"helloWorld": {
+			"output": "testing"
+		}
+	}
+}
+
+
+// will fail
+test>helloWorld: {
+	"message": "not match."
+}->assertResult: {
+	"id": "should fail",
+	"contains": {
+		"helloWorld": {
+			"output": "strange"
+		}
+	}
+}
+
+
