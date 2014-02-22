@@ -1,4 +1,4 @@
-Sushi:{JSON}
+SushiJSON
 ======
 	╔═╗┬ ┬┌─┐┬ ┬┬
 	╚═╗│ │└─┐├─┤│ : {JSON}
@@ -7,6 +7,7 @@ Sushi:{JSON}
 The partial-parsable-designed DSL which contains JSON with naming rule.  
 Mainly made for controlling the text editor. like the **Sublime Text**, **Vim**, and the other.
 
+ver 0.8.0
 
 ##example
 you can build your original API like below.
@@ -243,3 +244,5 @@ This feature can be use for injecting the original parameter, like below.
 	}
 	
 
+###why naming sushi
+I love sushi. forever.
