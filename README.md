@@ -250,3 +250,4 @@ This feature can be use for injecting the original parameter, like below.
 I love sushi. forever.
 
 ###License
+MIT
