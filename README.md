@@ -9,6 +9,7 @@ Mainly made for controlling the text editor. like the **Sublime Text**, **Vim**,
 
 
 ##example
+you can build your original API like below.
 
 	defineFilter: {
     	"name": "error_example",
@@ -80,7 +81,28 @@ nested, injects & accepts:
 			}
 		]
 	}
+	
+	
+##simple parser implementation
+easy to implement.
 
+[implementation with Python:](https://github.com/sassembla/SushiJSON/blob/master/parser/runtimeSample/SampleSushiJSONRunner.py)
+
+runtime
+
+	python -m parser.runtimeSample.SampleSushiJSONRunner ./parser/runtimeSample/source/helloworld.txt
+
+and helloworld.txt
+
+	// hello world API
+
+	helloWorld: {
+		"message": "hello world!"
+	}
+
+result
+
+	hello world!
 
 ##keywords
 	->, <-, "selectors" and "injects".
@@ -221,5 +243,3 @@ This feature can be use for injecting the original parameter, like below.
 	}
 	
 
-##sample parser implementation
-see SushiJSON.py

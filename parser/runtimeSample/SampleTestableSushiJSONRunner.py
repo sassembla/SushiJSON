@@ -101,6 +101,7 @@ def runTestCase(testCase):
 
 [runTestCase(testCase) for testCase in testCases]
 
+# use result if you wanna display it.
 # print("test result", globalResults)
 
 
