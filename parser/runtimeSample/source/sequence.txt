@@ -1,0 +1,7 @@
+// sequencial run
+
+sequence: {
+	"message": "seq1"
+}->sequence: {
+	"message": "seq2"
+}

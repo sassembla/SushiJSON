@@ -1,0 +1,17 @@
+// sequencial run with selectors, accepts and injects
+
+run: {
+	"freeInjectedParameter": "whis value will be injected to selector's API as \"message\" kied value.", 
+
+	// the keyword that is defined in SushiJSON. exchange the key when inject.
+	"injects": {
+		"freeInjectedParameter": "message"
+	},
+	"selectors": [
+		{
+			"helloWorld<-message": {
+				
+			}
+		}
+	]
+}

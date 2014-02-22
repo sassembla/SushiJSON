@@ -1,0 +1,14 @@
+// sequencial run with selectors
+
+sequence: {
+	"message": "seq1",
+
+	// the keyword that is defined in SushiJSON.
+	"selectors": [
+		{
+			"helloworld": {
+				"message": "hello from selectors"
+			}
+		}
+	]
+}

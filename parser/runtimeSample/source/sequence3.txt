@@ -1,0 +1,18 @@
+// sequencial run with selectors and accepts
+
+sequence: {
+	"message": "seq1",
+	"selectors": [
+		{
+			"sequence<-message": {
+				"selectors": [
+					{
+						"sequence<-message": {
+
+						}
+					}
+				]
+			}
+		}
+	]
+}

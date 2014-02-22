@@ -1,0 +1,5 @@
+// undefined
+
+undefined: {
+	// ignored. or you can implement "missing" behaviour
+}
