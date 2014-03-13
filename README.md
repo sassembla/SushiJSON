@@ -245,8 +245,31 @@ This feature can be use for injecting the original parameter, like below.
 		]
 	}
 	
+###testing
+testSuite
 
-###why naming sushi
+	./parser/source/test.txt
+	
+can run 
+
+	sh ./test.sh
+	
+	
+result is 
+
+	sh test.sh 
+	test started.
+	testing
+	('id:', u'helloWorld should set result', 'passed.')
+	test overed.
+	
+	test started.
+	not match.
+	('id:', u'should fail', 'failed.')
+	test overed.
+
+
+###why "Sushi"
 I love sushi. forever.
 
 ###License
